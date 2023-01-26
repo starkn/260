@@ -10,3 +10,6 @@ Brenden change from vscode
 Brenden change from GitHub
 
 Change from vscode
+
+
+Doing this as a paired assignment made me realize how important it can be to pull any changes before you push your own.
