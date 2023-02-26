@@ -1,0 +1,21 @@
+body {
+	background-color: #181818;
+	display: flex;
+	flex-direction: column;
+	color: white;
+	font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+header {
+	display: flex;
+	flex-wrap:nowrap;
+	justify-content: space-between;
+}
+
+.main-color {
+	color: #fb9725
+}
+
+.highlight-color {
+	color: #ffffff
+}
