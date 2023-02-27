@@ -3,19 +3,72 @@ body {
 	display: flex;
 	flex-direction: column;
 	color: white;
-	font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.logo {
+	font-size: large;
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	letter-spacing: .05em;
+}
+
+.logo span {
+	padding: 0;
 }
 
 header {
 	display: flex;
-	flex-wrap:nowrap;
+	flex-wrap: nowrap;
 	justify-content: space-between;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background-color: #181818;
+}
+
+header span {
+	padding: 0.5em;
+}
+
+main {
+	padding: 3em 0.5em;
+}
+
+main div {
+	height: 100px;
+	border: 1px;
+	border-color: #10dfdf;
+	border-style: solid;
+	margin: 2px;
+}
+
+footer {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	background-color: #181818;
+}
+
+footer span {
+	padding: 0.5em 2em;
+}
+
+a {
+	text-decoration: none;
+	color: #ffffff;
+}
+
+a:hover {
+	color: #afafaf;
 }
 
 .main-color {
-	color: #fb9725
+	color: #10dfdf;
 }
 
 .highlight-color {
-	color: #ffffff
+	color: #ffffff;
 }
