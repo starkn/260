@@ -4,12 +4,14 @@ body {
 	flex-direction: column;
 	color: white;
 	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	margin: 0;
 }
 
 .logo {
 	font-size: large;
 	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 	letter-spacing: .05em;
+	padding: 0.5em;
 }
 
 .logo span {
@@ -31,7 +33,10 @@ header span {
 }
 
 main {
-	padding: 3em 0.5em;
+	padding: 3.5em 0.5em;
+	box-sizing: border-box;
+	background-color: #2f2f2f;
+	min-height: 100vh;
 }
 
 main div {
@@ -71,4 +76,12 @@ a:hover {
 
 .highlight-color {
 	color: #ffffff;
+}
+
+.about {
+	background-color: #2f2f2f
+}
+
+.video {
+	width: 100vw;
 }
