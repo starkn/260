@@ -19,7 +19,14 @@ Midterm Review Subjects:
   - Probably other very basic linux cmdline stuff
 - HTML
   - Know what all the html elements stand for (div, a, b, etc.)
+    - a: anchor
+    - b: bold (bring attention)
+    - div: division
+    - p: paragraph
+    - ol: ordered list
+    - ul: unordered list
   - textContent is the text inside an element
+  - ```<!-- an html comment -->```
 - DNS
   - Record Type: CNAME or A
   - CNAME: Alias for another record
