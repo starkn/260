@@ -96,3 +96,27 @@ a:hover {
 	aspect-ratio: 16/9;
 	object-fit: cover;
 }
+
+#filter {
+	position: absolute;
+	right: 0;
+	bottom: 1em;
+	background-color: #181818;
+	padding: 1em;
+	list-style: none;
+}
+
+#filter li {
+	padding: .3em 0;
+	border-bottom:#10dfdf;
+	border-style: none none groove none;
+}
+
+#filter li:hover {
+	background-color: #2f2f2f;
+	cursor: pointer;
+}
+
+#filter li:active {
+	background-color: #2f2f2f;
+}

@@ -66,13 +66,14 @@ function fillFilter() {
 
 // Creates pulldown to select filter
 function gamesPulldown() {
-
+    filterList.hidden = !filterList.hidden;
 }
 
 // Input of game name/keyword, only displays those keywords on content page
 function filterContent(keyword) {
     console.log(keyword);
     populateContent(allContent.filter(element => element.keywords.includes(keyword)))
+    filterList.hidden = true;
 }
 
 window.onload = (event) => {
