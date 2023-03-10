@@ -39,12 +39,17 @@ main {
 	min-height: 100vh;
 }
 
-main div {
-	height: 100px;
+main a {
+	display: block;
 	border: 1px;
 	border-color: #10dfdf;
 	border-style: solid;
 	margin: 2px;
+	padding: 0.1em 2em;
+}
+
+main p {
+	margin: 0.4em;
 }
 
 footer {
@@ -84,4 +89,10 @@ a:hover {
 
 .video {
 	width: 100vw;
+}
+
+.vidThumb {
+	width: 100%;
+	aspect-ratio: 16/9;
+	object-fit: cover;
 }
