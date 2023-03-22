@@ -107,4 +107,6 @@ Simon Service Notes:
   It can even use third party middlewares fairly seamlessly
   You can use "rpc" instead of calling the function through routing
   
-
+You always have to remember to gitignore node modules
+Having a clean file system helps with serving your application
+You can define your own api through Express
