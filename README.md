@@ -98,3 +98,13 @@ Midterm Review Subjects:
   
 - JSON
   - Always double quotes around strings and keys: {"x":3}
+
+
+
+Simon Service Notes:
+  Express handles all routing for the server
+  Express can be used as an API of sorts using middleware
+  It can even use third party middlewares fairly seamlessly
+  You can use "rpc" instead of calling the function through routing
+  
+
