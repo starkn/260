@@ -110,3 +110,9 @@ Simon Service Notes:
 You always have to remember to gitignore node modules
 Having a clean file system helps with serving your application
 You can define your own api through Express
+
+
+
+Simon DB Notes:
+We learned that you can't set environment variables through aws console (or at least, we couldn't figure it out)
+We learned how to structure queries to read and write to Mongo DB
