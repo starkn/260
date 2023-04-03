@@ -116,3 +116,11 @@ You can define your own api through Express
 Simon DB Notes:
 We learned that you can't set environment variables through aws console (or at least, we couldn't figure it out)
 We learned how to structure queries to read and write to Mongo DB
+
+Simon Login Notes:
+We learned that you never unhash passwords to check them, you just hash the user input and compare it to what is stored in the database.
+This is so that the user's password is always secure and there is no simple way to unencrypt passwords and steal information.
+
+Simon WebSocket Notes:
+You have to ping every few seconds to unsure that the user is still logged in / hasn't timed out.
+
