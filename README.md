@@ -120,7 +120,10 @@ We learned how to structure queries to read and write to Mongo DB
 Simon Login Notes:
 We learned that you never unhash passwords to check them, you just hash the user input and compare it to what is stored in the database.
 This is so that the user's password is always secure and there is no simple way to unencrypt passwords and steal information.
+We learned cookies store the login information, not the actual username.
 
 Simon WebSocket Notes:
 You have to ping every few seconds to unsure that the user is still logged in / hasn't timed out.
+WebSocket is a separate protocol from http and listens on a different port.
+
 
