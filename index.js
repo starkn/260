@@ -19,6 +19,7 @@ app.use(express.static('public'));
 // Router for service endpoints
 const apiRouter = express.Router();
 app.use(`/api`, apiRouter);
+//const newapp = express.Route
 
 
 // API Function Calls
@@ -33,6 +34,21 @@ apiRouter.post('/user/create', async (req, res) => {
 	setAuth(res, user.token);
 
 	res.status(200).send({ msg: `Successfully created user ${user.username}` });
+});
+
+
+
+
+// Route to profile if logged in, else login page
+app.get('/profile', async (req, res) => {
+	res.sendFile(__dirname + '/public/login.html');
+	// const authToken = req.cookies[authCookieName];
+	// const user = await DB.getUserByToken(authToken);
+	// if (user) {
+	// 	res.sendFile('profile.html');
+	// } else {
+	// 	res.sendFile('login.html')
+	// }
 });
 
 
