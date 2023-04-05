@@ -36,6 +36,7 @@ apiRouter.post('/user/create', async (req, res) => {
 	res.status(200).send({ msg: `Successfully created user ${user.username}` });
 });
 
+// Login user
 apiRouter.post('/user/login', async (req, res) => {
 	const user = await DB.getUser(req.body.username)
 	if (user) {
@@ -48,6 +49,12 @@ apiRouter.post('/user/login', async (req, res) => {
 	res.status(401).send({ msg: '\u26A0 Invalid username or password \u26A0' });
 	//const user = await DB.createUser(req.body.username, req.body.password);
 
+});
+
+// Logout current user
+apiRouter.delete('/user/logout', async (req, res) => {
+	res.clearCookie("token");
+	res.status(204).end();
 });
 
 
