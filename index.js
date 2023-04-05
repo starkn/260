@@ -48,7 +48,7 @@ apiRouter.post('/user/login', async (req, res) => {
 	}
 	res.status(401).send({ msg: '\u26A0 Invalid username or password \u26A0' });
 	//const user = await DB.createUser(req.body.username, req.body.password);
-	
+
 });
 
 // Logout current user
