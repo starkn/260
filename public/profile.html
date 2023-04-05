@@ -19,18 +19,9 @@
 
 	<main>
 		<div>
-			<h1>LOGGED IN DON"T PUSH BUTTONS PLEASE</h1>
-			<div id="login">
-				<div class="usernameBox">
-					<input class="login-form" type="text" id="username" placeholder="username" />
-				</div>
-				<div class="passwordBox">
-					<input class="login-form" type="password" id="password" placeholder="password" />
-				</div>
-				<div class="accountButtons">
-					<button type="button" class="login-button" onclick="createUser()">Create Account</button>
-					<button type="button" class="login-button" onclick="loginUser()">Login</button>
-				</div>
+			<h1 id="welcomeuser"></h1>
+			<div>
+				<button type="button" class="logout-button" onclick="logout()">Logout</button>
 			</div>
 		</div>
 	</main>
@@ -41,3 +32,9 @@
 </body>
 
 </html>
+
+<script type="text/javascript">
+	const welcome = document.getElementById("welcomeuser");
+	const username = localStorage.getItem('userName');
+	welcome.textContent = `Welcome ${username}!!\u2655`;
+</script>
