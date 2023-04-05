@@ -31,7 +31,7 @@ async function loginOrCreate(endpoint) {
 }
 
 function logout() {
-	fetch(`/api/auth/logout`, {
+	fetch(`/api/user/logout`, {
 		method: 'delete',
 	}).then(() => (window.location.href = '/'));
 }
