@@ -26,7 +26,7 @@ app.use(`/api`, apiRouter);
 // Create User
 apiRouter.post('/user/create', async (req, res) => {
 	if (await DB.getUser(req.body.username)) {
-		res.status(409).send({ msg: '\U26A0 This username is taken \U26A0' });
+		res.status(409).send({ msg: '\u26A0 This username is taken \u26A0' });
 		return;
 	}
 
@@ -36,19 +36,33 @@ apiRouter.post('/user/create', async (req, res) => {
 	res.status(200).send({ msg: `Successfully created user ${user.username}` });
 });
 
+apiRouter.post('/user/login', async (req, res) => {
+	const user = await DB.getUser(req.body.username)
+	if (user) {
+		if (await bcrypt.compare(req.body.password, user.password)) {
+			setAuth(res, user.token);
+			res.status(200).send({ msg: `Successfully logged in ${user.username}` });
+			return;
+		}
+	}
+	res.status(401).send({ msg: '\u26A0 Invalid username or password \u26A0' });
+	//const user = await DB.createUser(req.body.username, req.body.password);
+	
+});
+
 
 
 
 // Route to profile if logged in, else login page
 app.get('/profile', async (req, res) => {
-	res.sendFile(__dirname + '/public/login.html');
-	// const authToken = req.cookies[authCookieName];
-	// const user = await DB.getUserByToken(authToken);
-	// if (user) {
-	// 	res.sendFile('profile.html');
-	// } else {
-	// 	res.sendFile('login.html')
-	// }
+	//res.sendFile(__dirname + '/public/login.html');
+	const authToken = req.cookies['token'];
+	const user = await DB.getUserByToken(authToken);
+	if (user) {
+		res.sendFile(__dirname + '/public/profile.html');
+	} else {
+		res.sendFile(__dirname + '/public/login.html')
+	}
 });
 
 
