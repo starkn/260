@@ -132,3 +132,9 @@ You have to use 'this.' a lot when you use js classes.
 LocalStorage is not accessible from index.js, only from the public folder
 You have to be careful about the null user (blank username and password). We have yet to secure against it, but it is a known vulnerability.
 Code injections need to be filtered, to avoid other vulnerabilities.
+
+Simon React notes:
+It is cool that react returns all the html, rather than having it static somewhere.
+Building and optimizing react apps takes a long time.
+It is necessary to have clean file trees for react to work well.
+
