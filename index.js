@@ -3,6 +3,7 @@ const cookie = require('cookie-parser');
 const express = require('express');
 const app = express();
 const DB = require('./database.js');
+const { chat } = require('./chat.js')
 
 // The service port may be set on the command line
 const port = process.argv.length > 2 ? process.argv[2] : 3000;
@@ -86,3 +87,5 @@ function setAuth(res, token) {
 const httpService = app.listen(port, () => {
 	console.log(`Listening on port ${port}`);
 });
+
+chat(httpService);
