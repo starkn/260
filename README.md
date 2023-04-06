@@ -126,4 +126,9 @@ Simon WebSocket Notes:
 You have to ping every few seconds to unsure that the user is still logged in / hasn't timed out.
 WebSocket is a separate protocol from http and listens on a different port.
 
-
+Startup Service Notes:
+The mongodb is also a type of protocol, which is kind of cool.
+You have to use 'this.' a lot when you use js classes.
+LocalStorage is not accessible from index.js, only from the public folder
+You have to be careful about the null user (blank username and password). We have yet to secure against it, but it is a known vulnerability.
+Code injections need to be filtered, to avoid other vulnerabilities.
