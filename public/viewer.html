@@ -7,6 +7,7 @@
 	<title>AmniLive</title>
 	<link rel="icon" href="favicon.ico" />
 	<link rel="stylesheet" href="main.css" />
+	<script src="viewer.js"></script>
 </head>
 
 <body>
@@ -15,29 +16,15 @@
 	</header>
 
 	<main>
-		<p>THIS IS A COMMENT</p>
-		<p>THIS IS A COMMENT</p>
-		<p>THIS IS A COMMENT</p>
-		<p>THIS IS A COMMENT</p>
-		<p>THIS IS A COMMENT</p>
-		<p>THIS IS A COMMENT</p>
-		<p>THIS IS A COMMENT</p>
-		<p>THIS IS A COMMENT</p>
-		<p>THIS IS A COMMENT</p>
-		<p>THIS IS A COMMENT</p>
-		<p>THIS IS A COMMENT</p>
-		<p>THIS IS A COMMENT</p>
-		<p>THIS IS A COMMENT</p>
-		<p>THIS IS A COMMENT</p>
-		<p>THIS IS A COMMENT</p>
-		<p>THIS IS A COMMENT</p>
-		<p>THIS IS A COMMENT</p>
-		<p>THIS IS A COMMENT</p>
+		<div id="chat-feed">
+		</div>
 	</main>
 
 
 	<footer>
-		<span><a href="index.html">BACK</a></span>
+		<span><a href="index.html">HOME</a></span>
+		<input class="chat-box" type="text" id="chat-box" placeholder="Type your message" />
+		<button class="chat-send" id="chat-send" onclick="send()">&#10853;</button>
 	</footer>
 </body>
 
