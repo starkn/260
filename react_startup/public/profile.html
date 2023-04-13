@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Login</title>
+	<link rel="icon" href="favicon.ico" />
+	<link rel="stylesheet" href="main.css" />
+	<script src="login.js"></script>
+</head>
+
+<body>
+	<header>
+		<a class="logo" href="index.html">
+			<span class="main-color">amni</span><span class="highlight-color">.live</span>
+		</a>
+	</header>
+
+	<main>
+		<div>
+			<h1 id="welcomeuser"></h1>
+			<div>
+				<button type="button" class="logout-button" onclick="logout()">Logout</button>
+			</div>
+		</div>
+	</main>
+
+	<footer>
+
+	</footer>
+</body>
+
+</html>
+
+<script type="text/javascript">
+	const welcome = document.getElementById("welcomeuser");
+	const username = localStorage.getItem('userName');
+	welcome.textContent = `Welcome ${username}!!\u2655`;
+</script>
