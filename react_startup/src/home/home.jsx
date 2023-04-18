@@ -1,9 +1,21 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 export function Home() {
 	return (
-    <main className='container-fluid bg-secondary text-center'>
-		<div>Home displayed here</div>
-    </main>
+		<div>
+			<main>
+				<div id="feed">
+				</div>
+			</main>
+
+
+			<footer>
+				<span><NavLink to="/">PEOPLE</NavLink></span>
+				<span><NavLink to="/">SEARCH</NavLink></span>
+				<span><NavLink onclick="gamesPulldown()">GAMES</NavLink></span>
+				<ul id="filter" hidden></ul>
+			</footer>
+		</div>
 	);
 }
