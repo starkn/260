@@ -1,9 +1,13 @@
 import React from 'react';
 
 export function Profile() {
+	let username = "";
 	return (
-    <main className='container-fluid bg-secondary text-center'>
-		<div>Profile displayed here</div>
-    </main>
+	<div>
+		<h1>{{ username }}</h1>
+		<div>
+			<button type="button" class="logout-button" onclick="logout()">Logout</button>
+		</div>
+	</div>
 	);
 }
