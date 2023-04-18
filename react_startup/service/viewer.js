@@ -16,6 +16,11 @@ class Chat {
 		this.protocol = window.location.protocol === 'http:' ? 'ws' : 'wss';
 		this.socket = new WebSocket(`${this.protocol}://${window.location.host}/ws`);
 
+		let port = window.location.port;
+		if (process.env.NODE_ENV !== 'production') {
+			port = 3000;
+		}
+
 		this.socket.onopen = (event) => {
 			this.appendMsg('system', 'Welcome to the Chat!', '');
 		};

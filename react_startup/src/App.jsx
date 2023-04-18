@@ -1,8 +1,7 @@
-import logo from './logo.svg';
-import Home from './home/home';
-import About from './about/about';
-import Profile from './profile/profile';
-import Viewer from './viewer/viewer';
+import { Home } from './home/home';
+import { About } from './about/about';
+import { Profile } from './profile/profile';
+import { Viewer } from './viewer/viewer';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { NavLink, Route, Routes } from 'react-router-dom';
